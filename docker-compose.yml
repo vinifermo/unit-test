@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+
+  postgres:
+    image: "postgres:12"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: vini
+      POSTGRES_PASSWORD: vini123
+      POSTGRES_DB: test_api
+
+volumes:
+  db_data:
